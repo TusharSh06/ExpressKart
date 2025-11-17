@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Components */
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200;
+  }
+  
+  .card-header {
+    @apply p-6 border-b border-gray-200;
+  }
+  
+  .card-body {
+    @apply p-6;
+  }
+  
+  .card-footer {
+    @apply p-6 border-t border-gray-200;
+  }
+  
+  .input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-orange-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-orange-700 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-gray-300 text-gray-700 font-medium py-3 px-6 rounded-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  }
+  
+  .btn-lg {
+    @apply py-4 px-8 text-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-900 text-white font-medium py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  }
+  
+  .btn-sm {
+    @apply py-2 px-4 text-sm;
+  }
+  
+  .space-y-6 > * + * {
+    @apply mt-6;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-20;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .badge-primary {
+    @apply bg-orange-100 text-orange-800;
+  }
+  
+  .shadow-soft {
+    @apply shadow-sm;
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-primary-600 {
+    color: #ea580c;
+  }
+  
+  .text-primary-500 {
+    color: #f97316;
+  }
+  
+  .text-primary-100 {
+    color: #ffedd5;
+  }
+  
+  .text-secondary-600 {
+    color: #475569;
+  }
+  
+  .text-success-600 {
+    color: #16a34a;
+  }
+  
+  .text-blue-600 {
+    color: #2563eb;
+  }
+  
+  .text-green-600 {
+    color: #16a34a;
+  }
+  
+  .text-purple-600 {
+    color: #9333ea;
+  }
+  
+  .text-orange-600 {
+    color: #ea580c;
+  }
+  
+  .text-yellow-600 {
+    color: #ca8a04;
+  }
+  
+  .bg-blue-100 {
+    background-color: #dbeafe;
+  }
+  
+  .bg-green-100 {
+    background-color: #dcfce7;
+  }
+  
+  .bg-purple-100 {
+    background-color: #f3e8ff;
+  }
+  
+  .bg-orange-100 {
+    background-color: #fed7aa;
+  }
+  
+  .bg-yellow-100 {
+    background-color: #fef3c7;
+  }
+  
+  .bg-red-600 {
+    background-color: #dc2626;
+  }
+  
+  .bg-purple-600 {
+    background-color: #9333ea;
+  }
+  
+  .bg-primary-100 {
+    background-color: #ffedd5;
+  }
+  
+  .bg-primary-600 {
+    background-color: #ea580c;
+  }
+  
+  .bg-primary-700 {
+    background-color: #c2410c;
+  }
+  
+  .bg-secondary-600 {
+    background-color: #475569;
+  }
+  
+  .bg-secondary-100 {
+    background-color: #f1f5f9;
+  }
+  
+  .bg-success-100 {
+    background-color: #dcfce7;
+  }
+  
+  .bg-success-600 {
+    background-color: #16a34a;
+  }
+  
+  .border-primary-500 {
+    border-color: #f97316;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+*:focus {
+  outline: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

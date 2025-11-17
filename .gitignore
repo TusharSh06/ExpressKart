@@ -1,0 +1,50 @@
+# -------------------------
+# Node Modules (Root + Client + Server)
+# -------------------------
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# -------------------------
+# Environment Variables
+# -------------------------
+.env
+.env.local
+client/.env
+server/.env
+
+# -------------------------
+# Build Output
+# -------------------------
+client/dist/
+server/build/
+
+# -------------------------
+# Logs
+# -------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# -------------------------
+# OS / Editor Files
+# -------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# -------------------------
+# Uploads (Server)
+# -------------------------
+uploads/
+public/uploads/
+
+# -------------------------
+# Misc
+# -------------------------
+*.zip
+*.tar.gz

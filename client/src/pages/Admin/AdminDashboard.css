@@ -1,0 +1,43 @@
+/* AdminDashboard.css */
+
+/* Animation for pending vendor rows */
+@keyframes highlight {
+  0% {
+    background-color: rgba(254, 240, 138, 0.5); /* yellow-100 with opacity */
+  }
+  50% {
+    background-color: rgba(254, 240, 138, 1); /* yellow-100 full opacity */
+  }
+  100% {
+    background-color: rgba(254, 240, 138, 0.5); /* yellow-100 with opacity */
+  }
+}
+
+/* Highlight class for pending vendors */
+.highlight-row {
+  animation: highlight 1s ease-in-out 3;
+}
+
+/* Style for pending vendor rows */
+tr[data-vendor-status="pending"] {
+  background-color: rgba(254, 249, 195, 0.5); /* yellow-100 with opacity */
+  border-left: 4px solid #eab308; /* yellow-500 */
+}
+
+tr[data-vendor-status="pending"]:hover {
+  background-color: rgba(254, 240, 138, 0.7); /* yellow-200 with opacity */
+}
+
+/* Pulse animation for notification */
+@keyframes custom-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(234, 179, 8, 0);
+  }
+}
+
+.animate-pulse {
+  animation: custom-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

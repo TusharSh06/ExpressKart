@@ -47,7 +47,8 @@ app.use(hpp());
 
 // CORS configuration (must be BEFORE rate limiter to allow preflight)
 const corsOptions = {
-  origin: [process.env.FRONTEND_URL, // Vercel frontend
+  origin: [
+    process.env.FRONTEND_URL, // Vercel frontend
   'http://localhost:3000'// Local frontend
   ],
   credentials: true,

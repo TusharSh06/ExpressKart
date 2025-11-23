@@ -100,12 +100,12 @@ const HomePage = () => {
 
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-20">
+        <section className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white py-20">
           <div className="container-custom text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Discover Local Treasures
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-orange-100">
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">
               Connect with amazing vendors in your neighborhood. Fresh, local, and delivered fast.
             </p>
             

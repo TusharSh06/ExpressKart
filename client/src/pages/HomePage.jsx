@@ -51,8 +51,8 @@ const HomePage = () => {
 
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-600 text-white">
-          <div className="absolute inset-0 bg-black/20"></div>
+        <section className="relative bg-gradient-to-r from-[#7bddd8] to-[#1d70cf] text-white">
+          <div className="absolute inset-0 bg-black/10"></div>
           <div className="relative container-custom section-padding">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
@@ -61,7 +61,7 @@ const HomePage = () => {
                   Discover amazing products from vendors near you
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-primary-100">
+              <p className="text-xl md:text-2xl mb-8 text-blue-50">
                 Connect with local vendors, get fresh products delivered to your doorstep, 
                 and support small businesses in your community.
               </p>
@@ -75,7 +75,7 @@ const HomePage = () => {
                 </Link>
                 <Link 
                   to="/register" 
-                  className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-md border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-700 transition-colors duration-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+                  className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-md border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#1d70cf] transition-colors duration-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
                 >
                   Become a Vendor
                 </Link>
@@ -147,7 +147,7 @@ const HomePage = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding bg-primary-600 text-white">
+        <section className="section-padding bg-[#0a2e59] text-white">
           <div className="container-custom text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Start Shopping?

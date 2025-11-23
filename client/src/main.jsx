@@ -36,3 +36,32 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </HelmetProvider>
   </React.StrictMode>,
 )
+
+// Register service worker for PWA
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", async () => {
+    try {
+      const reg = await navigator.serviceWorker.register("/sw.js");
+      console.log("Service Worker registered:", reg);
+
+      // Optional: listen for updates and notify user
+      reg.addEventListener("updatefound", () => {
+        const newWorker = reg.installing;
+        newWorker.addEventListener("statechange", () => {
+          if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+            // New update available
+            // You can dispatch a custom event or show toast to user
+            window.dispatchEvent(new CustomEvent("sw-update-available"));
+          }
+        });
+      });
+
+      // Optional: auto-activate new SW
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        console.log("Service worker controller changed");
+      });
+    } catch (err) {
+      console.error("SW registration failed:", err);
+    }
+  });
+}

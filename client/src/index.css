@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* PWA Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn { 
+  animation: fadeIn 200ms ease-out both;
+}
+
 /* Custom Components */
 @layer components {
   .card {

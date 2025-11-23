@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext.jsx';
 import { CartProvider } from './context/CartContext.jsx';
@@ -23,15 +23,28 @@ import MyOrdersPage from './pages/Orders/MyOrdersPage';
 import VendorsPage from './pages/Vendors/VendorsPage';
 import AboutPage from './pages/About/AboutPage';
 import NotFoundPage from './pages/NotFoundPage';
+import InstallPopup from './components/InstallPopup';
 import './App.css';
 
 function App() {
+  // Add this effect to trigger the install prompt
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      // This will trigger the popup if the beforeinstallprompt event was already fired
+      const event = new Event('beforeinstallprompt');
+      window.dispatchEvent(event);
+    }, 3000); // 3 second delay
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <AuthProvider>
       <CartProvider>
         <WishlistProvider>
           <Router>
             <Layout>
+              {/* Install PWA Popup */}
+              <InstallPopup />
             <Routes>
             {/* Public Routes */}
             <Route path="/" element={<HomePage />} />
